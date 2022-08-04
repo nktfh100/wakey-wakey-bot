@@ -1,0 +1,28 @@
+{
+  "name": "wakey-wakey-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "start": "pm2 start ecosystem.config.json --no-daemon",
+    "deploy-commands": "cross-env NODE_ENV=production node deploy-commands.js",
+    "deploy-commands:dev": "cross-env NODE_ENV=development node deploy-commands.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.15.0",
+    "@discordjs/rest": "^0.5.0",
+    "custom-env": "^2.0.1",
+    "discord-api-types": "^0.36.2",
+    "discord.js": "^13.8.1",
+    "mongoose": "^6.4.4",
+    "pm2": "^5.2.0",
+    "simple-node-logger": "^21.8.12",
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
